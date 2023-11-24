@@ -12,19 +12,19 @@
 //Funcion validacion
 int validacion(){
 
-    char cantidadItems[1];
-    int flag = 1, cantItems;
+    char valorCentinela[1];
+    int flag = 1, valorCentinelaInt;
 
     do{
 
-        scanf(" %s", cantidadItems); 
+        scanf(" %s", valorCentinela); 
 
         for(size_t i = 0; i < 1; i++){
             
-            if(isdigit(cantidadItems[i]) != 0){
+            if(isdigit(valorCentinela[i]) != 0){
 
                 flag = 1;
-                cantItems = (int) cantidadItems[i] - 48;
+                valorCentinelaInt = (int) valorCentinela[i] - 48;
                 break;
             }else
                 flag = 0;
@@ -39,7 +39,7 @@ int validacion(){
 
     }while(flag == 0);
     
-    return cantItems;
+    return valorCentinelaInt;
 }
 
 //Función ingreso de datos

@@ -7,17 +7,15 @@ int main(void){
     char precio[50];
     char codigo[50];
     
-    //Arrays
+    //Matrices
     char arrayNombres[5][50];
     char arrayCantidad[5][50];
     char arrayPrecio[5][50];
     char arrayCodigo[5][50];
 
-    //Indices Arrays
-    int codigoInt, i;
-
     //Variables auxiliares
     int cantItems, auxCantItems, selector;
+    int codigoInt, i;
 
     //Menu
     do{
@@ -59,7 +57,8 @@ int main(void){
             scanf("%d", &codigoInt);
 
             for(i = 0; i < 5; i++){
-                
+
+                //convertir de char a int 
                 if(codigoInt == ((int) arrayCodigo[i][0] - 48)){
 
                     ingresoDatos(nombre, cantidad, precio, codigo);
@@ -82,12 +81,12 @@ int main(void){
                 
                 if(codigoInt == ((int) arrayCodigo[i][0] - 48)){
 
-                    for (size_t j = 0; j < 50; j++){
+                    for(size_t j = 0; j < 50; j++){
 
                         arrayNombres[i][j] = '\0';
                         arrayCantidad[i][j] = '\0';
                         arrayPrecio[i][j] = '\0';
-                        arrayCodigo[i][j] = '\0';
+                        arrayCodigo[i][0] = '\0';
                     }
                     break;
                 }        
