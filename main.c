@@ -14,7 +14,6 @@ int main(void){
     char arrayCodigo[5][50];
 
     //Indices Arrays
-    int indiceArray = 0;
 
     //Variables auxiliares
     int cantItems, auxCantItems, selector;
@@ -30,9 +29,12 @@ int main(void){
 
         case 1:
             printf("Agregar items\n");
+            int indiceArray = 0;
             //Validación de la cantidad de items
             printf("Ingrese la cantidad de items: ");
             cantItems = validacion();
+            system("pause");
+            system("clear");
             auxCantItems = cantItems;
 
             do{
@@ -48,21 +50,46 @@ int main(void){
                 auxCantItems--;
             }while(auxCantItems > 0);
             
-
             break;
         case 2:
+
             printf("Modificar items\n");
+
             break;
         case 3:
+
             printf("Eliminar items\n");
+            int codigoInt, i;
+            printf("Ingrese el codigo del item que desea eliminar: ");
+            scanf("%d", &codigoInt);
+
+            for(i = 0; i < 5; i++){
+                
+                if(codigoInt == ((int) arrayCodigo[i][0] - 48)){
+
+                    for (size_t j = 0; j < 50; j++){
+
+                        arrayNombres[i][j] = '\0';
+                        arrayCantidad[i][j] = '\0';
+                        arrayPrecio[i][j] = '\0';
+                        arrayCodigo[i][j] = '\0';
+                    }
+                    break;
+                }        
+            }
+
             break;
         case 4:
-            printf("Mostrar items\n");
 
+            printf("Mostrar items\n");
+            printf("+--------+------------+--------+----------+\n");
+            printf("| Codigo | Producto   | Precio | Cantidad |\n");
             for(size_t i = 0; i < cantItems; i++){
 
-                printf("%s %s %s %s\n", arrayNombres[i], arrayCantidad[i], arrayPrecio[i], arrayCodigo[i]);
+                printf("+--------+------------+--------+----------+\n");
+                printf("| %-6s | %-10s | %-6s | %-8s |\n", arrayCodigo[i], arrayNombres[i], arrayPrecio[i], arrayCantidad[i]);
             }
+            printf("+--------+------------+--------+----------+\n");
             break;
         case 5:
             printf("Salir\n");

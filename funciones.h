@@ -5,11 +5,9 @@
 #include<stdlib.h>
 #include<string.h>
 
-//Funcion agregar item
-
-//Funcion eliminar item
-
 //Funcion modificar item
+
+
 
 //Funcion validacion
 int validacion(){
@@ -37,7 +35,6 @@ int validacion(){
 
             printf("ERROR, valor no valido. Intente de nuevo\n");
             system("pause");
-            system("cls");
         }
 
     }while(flag == 0);
@@ -57,7 +54,5 @@ void ingresoDatos(char *nombre, char *cantidad, char *precio, char *codigo){
     printf("Ingrese el codigo del producto: ");
     scanf("%s", codigo);
 }
-
-//Función imprimir tabla de objetos
 
 #endif
