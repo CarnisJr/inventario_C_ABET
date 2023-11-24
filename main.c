@@ -14,6 +14,7 @@ int main(void){
     char arrayCodigo[5][50];
 
     //Indices Arrays
+    int codigoInt, i;
 
     //Variables auxiliares
     int cantItems, auxCantItems, selector;
@@ -54,7 +55,6 @@ int main(void){
         case 2:
 
             printf("Modificar items\n");
-            int codigoInt, i;
             printf("Ingrese el codigo del item que desea modificar: ");
             scanf("%d", &codigoInt);
 
@@ -63,10 +63,10 @@ int main(void){
                 if(codigoInt == ((int) arrayCodigo[i][0] - 48)){
 
                     ingresoDatos(nombre, cantidad, precio, codigo);
-                    strcpy(arrayNombres[codigoInt], nombre);
-                    strcpy(arrayCantidad[codigoInt], cantidad);
-                    strcpy(arrayPrecio[codigoInt], precio);
-                    strcpy(arrayCodigo[codigoInt], codigo);
+                    strcpy(arrayNombres[i], nombre);
+                    strcpy(arrayCantidad[i], cantidad);
+                    strcpy(arrayPrecio[i], precio);
+                    strcpy(arrayCodigo[i], codigo);
                     break;
                 }        
             }
@@ -75,7 +75,6 @@ int main(void){
         case 3:
 
             printf("Eliminar items\n");
-            int codigoInt, i;
             printf("Ingrese el codigo del item que desea eliminar: ");
             scanf("%d", &codigoInt);
 
