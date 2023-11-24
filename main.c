@@ -54,6 +54,22 @@ int main(void){
         case 2:
 
             printf("Modificar items\n");
+            int codigoInt, i;
+            printf("Ingrese el codigo del item que desea modificar: ");
+            scanf("%d", &codigoInt);
+
+            for(i = 0; i < 5; i++){
+                
+                if(codigoInt == ((int) arrayCodigo[i][0] - 48)){
+
+                    ingresoDatos(nombre, cantidad, precio, codigo);
+                    strcpy(arrayNombres[codigoInt], nombre);
+                    strcpy(arrayCantidad[codigoInt], cantidad);
+                    strcpy(arrayPrecio[codigoInt], precio);
+                    strcpy(arrayCodigo[codigoInt], codigo);
+                    break;
+                }        
+            }
 
             break;
         case 3:
