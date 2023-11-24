@@ -22,7 +22,7 @@ int main(void){
     //Menu
     do{
 
-        printf("\tMenu\n\n1.Agregar items\n2.Modificar items\n3.Eliminar items\n4.Calcular total\n5.Salir\n\n");
+        printf("\tMenu\n\n1.Agregar items\n2.Modificar items\n3.Eliminar items\n4.Mostrat items\n5.Salir\n\n");
         printf("Seleccione una opcion: ");
         selector = validacion();
         system("clear");
